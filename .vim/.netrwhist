@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/luan'
 let g:netrw_dirhist_5='/home/luan/dev/test/server'
 let g:netrw_dirhist_4='/home/luan/dev/Aulas/Aulas/5° Período/DB/projeto2'
 let g:netrw_dirhist_3='/home/luan/dev/Aulas/Aulas/5° Período/DB/projeto2/public/loja'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_0='/home/luan/dev/Aulas/Aulas/5° Período/DB/projeto2'
 let g:netrw_dirhist_9='/home/luan/dev/server'
 let g:netrw_dirhist_8='/home/luan/dev/Aulas/Aulas/5° Período/OS/seminário/implementação/real-time_schedulers/pages'
 let g:netrw_dirhist_7='/home/luan/dev/Aulas/Aulas/5° Período/OS/seminário/implementação/real-time_schedulers'
-let g:netrw_dirhist_6='/home/luan/dev/Aulas/Aulas/5° Período/OS/seminário/implementação/real-time_schedulers/public'
