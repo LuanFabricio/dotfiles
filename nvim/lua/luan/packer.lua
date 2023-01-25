@@ -38,4 +38,6 @@ return require('packer').startup(function(use)
   use 'tanvirtin/monokai.nvim'
   use 'rebelot/kanagawa.nvim'
   use {'nyoom-engineering/oxocarbon.nvim'}
+  use 'dart-lang/dart-vim-plugin'
+  use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
 end)
