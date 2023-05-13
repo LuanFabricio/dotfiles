@@ -35,9 +35,28 @@ return require('packer').startup(function(use)
 	  "windwp/nvim-autopairs",
 	  config = function() require("nvim-autopairs").setup {} end
   }
-  use 'tanvirtin/monokai.nvim'
-  use 'rebelot/kanagawa.nvim'
   use {'nyoom-engineering/oxocarbon.nvim'}
   use 'dart-lang/dart-vim-plugin'
   use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+  use 'nvim-tree/nvim-web-devicons'
+  use 'gpanders/editorconfig.nvim'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    ft = { "markdown" },
+  })
+
+  use 'ThePrimeagen/harpoon'
+  use 'nvim-lua/plenary.nvim'
+
+  -- Colorschemes
+  use('navarasu/onedark.nvim')
+  use 'tanvirtin/monokai.nvim'
+  use 'rebelot/kanagawa.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
 end)
