@@ -5,7 +5,7 @@ function Color(color)
 end
 
 -- Color("torte")
--- Color("oxocarbon")
+Color("oxocarbon")
 -- Color("kanagawa-dragon")
-Color("kanagawa-wave")
+-- Color("kanagawa-wave")
 -- Color("catppuccin-macchiato");
