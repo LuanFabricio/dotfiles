@@ -78,9 +78,13 @@ return require('packer').startup(function(use)
 
   use("folke/zen-mode.nvim")
 
+  -- Astro
+  use 'wuelnerdotexe/vim-astro'
+
   -- Colorschemes
   use('navarasu/onedark.nvim')
   use 'tanvirtin/monokai.nvim'
   use 'rebelot/kanagawa.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
+  use 'lervag/vimtex'
 end)
