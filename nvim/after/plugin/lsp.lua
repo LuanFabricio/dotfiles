@@ -5,8 +5,6 @@ lsp.preset("recommended")
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  -- Replace the language servers listed here
-  -- with the ones you want to install
   ensure_installed = {
 	  'tsserver',
 	  'rust_analyzer',
@@ -17,14 +15,13 @@ require('mason-lspconfig').setup({
     lsp.default_setup,
   },
 })
-
 -- Fix Undefined global 'vim'
 lsp.configure('lua_ls', {
 	settings = {
 		Lua = {
 			diagnostics = {
 				globals = { 'vim' }
-			}
+			},
 		}
 	}
 })
