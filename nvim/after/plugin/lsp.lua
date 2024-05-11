@@ -107,3 +107,6 @@ vim.diagnostic.config({
 require('lspconfig')['tsserver'].setup {
 	on_attach = on_attach,
 }
+
+-- Python LSP
+require'lspconfig'.jedi_language_server.setup{}
