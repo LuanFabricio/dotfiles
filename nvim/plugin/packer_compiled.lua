@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/luan/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?.lua;/home/luan/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?/init.lua;/home/luan/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?.lua;/home/luan/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/luan/.cache/nvim/packer_hererocks/2.1.1702233742/lib/lua/5.1/?.so"
+local package_path_str = "/home/luan/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?.lua;/home/luan/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?/init.lua;/home/luan/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?.lua;/home/luan/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/luan/.cache/nvim/packer_hererocks/2.1.1716656478/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -246,6 +246,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/luan/.local/share/nvim/site/pack/packer/start/vim-astro",
     url = "https://github.com/wuelnerdotexe/vim-astro"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/luan/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   vimtex = {
     loaded = true,

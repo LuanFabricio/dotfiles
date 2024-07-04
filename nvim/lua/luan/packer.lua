@@ -81,6 +81,8 @@ return require('packer').startup(function(use)
   -- Astro
   use 'wuelnerdotexe/vim-astro'
 
+  use 'tpope/vim-fugitive'
+
   -- Colorschemes
   use('navarasu/onedark.nvim')
   use 'tanvirtin/monokai.nvim'

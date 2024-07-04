@@ -34,6 +34,10 @@ cmp.setup({
       completion = cmp.config.window.bordered(),
       documentation = cmp.config.window.bordered(),
     },
+    -- INFO: Remove this to enable autocomplete popup
+    -- completion = {
+    --     autocomplete = false,
+    -- },
     mapping = cmp.mapping.preset.insert({
 	['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
  	['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
@@ -42,6 +46,7 @@ cmp.setup({
 
     })
   })
+
 -- local cmp_mappings = lsp.defaults.cmp_mappings({
 -- 	['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
 -- 	['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
