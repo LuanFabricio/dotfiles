@@ -4,11 +4,11 @@ function Color(color)
 	vim.cmd.colorscheme(color)
 end
 
-Color()
+--Color()
 
 -- Color("slate")
 -- Color("torte")
--- Color("oxocarbon")
+Color("oxocarbon")
 -- Color("kanagawa-dragon")
 -- Color("kanagawa-wave")
 -- Color("catppuccin-macchiato");

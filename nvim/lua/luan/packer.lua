@@ -83,6 +83,11 @@ return require('packer').startup(function(use)
 
   use 'tpope/vim-fugitive'
 
+  use {
+	"NeogitOrg/neogit",
+	requires = { {"nvim-lua/plenary.nvim"}, {"sindrets/diffview.nvim"} }
+  }
+
   -- Colorschemes
   use('navarasu/onedark.nvim')
   use 'tanvirtin/monokai.nvim'

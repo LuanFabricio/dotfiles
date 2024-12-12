@@ -6,7 +6,6 @@ lsp.preset("recommended")
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
-	  'tsserver',
 	  'rust_analyzer',
 	  'lua_ls',
 	  'eslint',
@@ -109,9 +108,9 @@ vim.diagnostic.config({
 })
 
 -- TS LSP
-require('lspconfig')['tsserver'].setup {
-	on_attach = on_attach,
-}
+-- require('lspconfig')['tsserver'].setup {
+-- 	on_attach = on_attach,
+-- }
 
 -- Python LSP
 require'lspconfig'.jedi_language_server.setup{}
