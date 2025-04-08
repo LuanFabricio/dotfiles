@@ -9,6 +9,7 @@ require('mason-lspconfig').setup({
 	  'rust_analyzer',
 	  'lua_ls',
 	  'eslint',
+	  'clangd'
   },
   handlers = {
     lsp.default_setup,
@@ -29,23 +30,36 @@ local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 -- local cmp_action = require('lsp-zero').cmp_action()
 cmp.setup({
-    window = {
-      completion = cmp.config.window.bordered(),
-      documentation = cmp.config.window.bordered(),
-    },
-    -- INFO: Remove this to enable autocomplete popup
-    -- completion = {
-    --     autocomplete = false,
-    -- },
-    mapping = cmp.mapping.preset.insert({
-	['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
- 	['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
- 	['<cr>'] = cmp.mapping.confirm({ select = true }),
- 	["<C-Space>"] = cmp.mapping.complete(),
+    snippet = {
+      -- REQUIRED - you must specify a snippet engine
+      expand = function(args)
+        require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
 
+        -- For `mini.snippets` users:
+        -- local insert = MiniSnippets.config.expand.insert or MiniSnippets.default_insert
+        -- insert({ body = args.body }) -- Insert at cursor
+        -- cmp.resubscribe({ "TextChangedI", "TextChangedP" })
+        -- require("cmp.config").set_onetime({ sources = {} })
+      end,
+    },
+    window = {
+      -- completion = cmp.config.window.bordered(),
+      -- documentation = cmp.config.window.bordered(),
+    },
+    mapping = cmp.mapping.preset.insert({
+      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.abort(),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    }),
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'luasnip' }, -- For luasnip users.
+    }, {
+      { name = 'buffer' },
     })
   })
-
 -- local cmp_mappings = lsp.defaults.cmp_mappings({
 -- 	['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
 -- 	['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
