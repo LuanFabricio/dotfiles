@@ -9,7 +9,6 @@ return {
 	{
 		'VonHeikemen/lsp-zero.nvim',
 		dependencies = {
-			{'neovim/nvim-lspconfig'},
 			{'williamboman/mason.nvim'},
 			{'williamboman/mason-lspconfig.nvim'},
 			-- LSP Support
@@ -51,13 +50,15 @@ return {
 	{'gpanders/editorconfig.nvim'},
 	{
 		"iamcco/markdown-preview.nvim",
-		run = function() vim.fn["mkdp#util#install"]() end,
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		ft = { "markdown" },
+		build = function() vim.fn["mkdp#util#install"]() end,
 	},
 
-  {
-	"NeogitOrg/neogit",
-	dependencies = { {"nvim-lua/plenary.nvim"}, {"sindrets/diffview.nvim"} }
-  },
+	{
+		"NeogitOrg/neogit",
+		dependencies = { {"nvim-lua/plenary.nvim"}, {"sindrets/diffview.nvim"} }
+	},
 	{'nvim-lua/plenary.nvim'},
 	{"folke/zen-mode.nvim"},
 	{'navarasu/onedark.nvim'},
@@ -65,4 +66,5 @@ return {
 	{'rebelot/kanagawa.nvim'},
 	{ "catppuccin/nvim", as = "catppuccin" },
 	{'lervag/vimtex'},
+	{ "EdenEast/nightfox.nvim" }
 }
