@@ -1,6 +1,6 @@
 local lsp = require("lsp-zero")
 
-lsp.preset("recommended")
+-- lsp.preset("recommended")
 
 
 require('mason').setup({})
@@ -76,15 +76,15 @@ cmp.setup({
 -- 	mapping = cmp_mappings
 -- })
 
-lsp.set_preferences({
-	suggest_lsp_servers = false,
-	sign_icons = {
-		error = 'E',
-		warn = 'W',
-		hint = 'H',
-		info = 'I'
-	}
-})
+-- lsp.set_preferences({
+-- 	suggest_lsp_servers = false,
+-- 	sign_icons = {
+-- 		error = 'E',
+-- 		warn = 'W',
+-- 		hint = 'H',
+-- 		info = 'I'
+-- 	}
+-- })
 
 local on_attach = function(client, bufnr)
 	-- Enable completion triggered by <c-x><c-o>
