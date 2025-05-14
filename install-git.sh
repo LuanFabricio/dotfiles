@@ -25,5 +25,7 @@ ninja -C out/Release-x64 skia modules
 # Installing dependecies
 sudo pacman -S gcc clang cmake ninja libx11 libxcursor mesa-libgl fontconfig libwebp
 
-cd $GIT_LIBS
-./bild.sh
+
+echo $HOME/deps/skia
+cd $GIT_LIBS/aseprite
+./build.sh
