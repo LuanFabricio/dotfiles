@@ -44,3 +44,6 @@ TODO: Add a description
 # Installation
 1. Run `./install.sh`
 2. Run `./setup-wm.sh`
+
+# Fonts
+- Install [nerd fonts](https://www.nerdfonts.com/)
