@@ -45,5 +45,10 @@ TODO: Add a description
 1. Run `./install.sh`
 2. Run `./setup-wm.sh`
 
+# Some issues
+## Ethernet speed
+- https://askubuntu.com/questions/171174/get-maximum-bandwidth-of-a-network-adapter
+- https://www.shellhacks.com/change-speed-duplex-ethernet-card-linux/
+
 # Fonts
 - Install [nerd fonts](https://www.nerdfonts.com/)
