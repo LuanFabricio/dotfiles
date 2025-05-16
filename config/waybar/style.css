@@ -214,8 +214,10 @@ button:hover {
 }
 
 #network {
-    background-color: @network-bg;
-    color: @network-fg;
+}
+
+#custom-network {
+
 }
 
 #network.disconnected {

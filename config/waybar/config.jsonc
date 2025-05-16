@@ -18,9 +18,11 @@
     "modules-right": [
     	"disk",
         "network",
+	"custom/network",
 	"load",
 	"memory",
 	"cpu",
+	"temperature",
         "pulseaudio",
         "backlight",
         "battery",
@@ -39,6 +41,7 @@
 	 "format": "{}"
     },
     "disk": {
+	    "path": "/home",
 	    "format": "{free} ({percentage_used}% in use)",
     },
     "clock": {
@@ -75,6 +78,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "interface": "enp*", // (Optional) To force the use of this interface
 	"format-ethernet": "enth({ifname}): {bandwidthTotalBits}",
         "format-disconnected" : "no network"
         // "format-wifi": "{essid} ",
@@ -102,7 +106,18 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    }
+    },
+    "temperature": {
+        "format": "{temperatureC}°C "
+    },
+    "custom/network": {
+        "format": "{}Mb/s",
+    	"interval": 30,
+    	"exec": "cat /sys/class/net/enp5s0/speed",
+    	"exec-if": "exit 0",
+    	"signal": 8,
+    	"tooltip": false,
+     },
  }
 
 }
