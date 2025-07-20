@@ -7,16 +7,20 @@ if [ -z "$1" ]; then
 	exit
 fi
 
-if [[ $2 -eq 0 ]]; then
+#if [[ $SESSION_PATH -eq 0 ]]; then
+if [ -z $2 ]; then
 	echo "Session path not found."
 	SESSION_PATH=$PWD
 fi
 
+echo $2
 echo $SESSION_NAME
 echo $SESSION_PATH
+echo $PWD
+echo $PWD/$SESSION_PATH
 
 if !tmux has-session -t $SESSION_NAME 2> /dev/null; then
-	echo "Session already exists attaching"
+	echo "Session already exists attaching..."
 else
 	cd $SESSION_PATH
 	tmux new -d -s $SESSION_NAME 'nvim . && zsh ' $3
