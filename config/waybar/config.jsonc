@@ -113,7 +113,7 @@
     "custom/network": {
         "format": "{}Mb/s",
     	"interval": 30,
-    	"exec": "cat /sys/class/net/enp5s0/speed",
+    	"exec": "cat /sys/class/net/enp8s0/speed",
     	"exec-if": "exit 0",
     	"signal": 8,
     	"tooltip": false,
