@@ -16,7 +16,7 @@ require('mason-lspconfig').setup({
   },
 })
 -- Fix Undefined global 'vim'
-lsp.configure('lua_ls', {
+vim.lsp.config('lua_ls', {
 	settings = {
 		Lua = {
 			diagnostics = {
@@ -127,4 +127,5 @@ vim.diagnostic.config({
 -- }
 
 -- Python LSP
-require'lspconfig'.jedi_language_server.setup{}
+vim.lsp.enable("jedi_language_server")
+-- require'lspconfig'.jedi_language_server.setup{}
