@@ -4,7 +4,7 @@ function Color(color)
 	vim.cmd.colorscheme(color)
 end
 
---Color()
+Color("habamax")
 
 -- Color("slate")
 -- Color("torte")
@@ -13,4 +13,4 @@ end
 -- Color("kanagawa-wave")
 -- Color("catppuccin-macchiato");
 -- Color("industry")
-Color("nightfox")
+-- Color("nightfox")
