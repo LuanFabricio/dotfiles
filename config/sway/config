@@ -228,6 +228,18 @@ input 13652:64009:Compx_2.4G_Wireless_Receiver {
     xkb_variant intl
 }
 
+input 1739:0:Synaptics_TM3276-022 {
+    dwt enabled
+    tap enabled
+    middle_emulation enabled
+    scroll_factor 0.2
+}
+
+input 1:1:AT_Translated_Set_2_keyboard {
+    xkb_layout br
+    xkb_variant thinkpad
+}
+
 # Waybar
 # bar {
 #     position bottom
