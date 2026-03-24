@@ -17,6 +17,7 @@ xwayland enable
 
 # My autostart configs
 exec wlsunset -s 06:30 -S 17:30
+# exec ps aux | grep wlsunset | head -n 1 | awk '{print }' | xargs -r kill -SIGUSR1
 exec flameshot
 exec --no-startup-id /usr/lib/gsd-xsettings
 exec foot
@@ -57,7 +58,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # exec --no-startup-id nitrogen --restore
-exec --no-startup-id swaybg -i /usr/share/backgrounds/steam/entropy_centre_1.jpg
+exec --no-startup-id swaybg -i $HOME/Pictures/wallpaper.jpg
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
@@ -105,7 +106,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+alt+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -202,15 +203,27 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy
 
+# swaymsg -t get_inputs
+
 input 1133:49283:Logitech_G403_Prodigy_Gaming_Mouse {
     tap enabled
     natural_scroll disabled
     dwt enabled
     accel_profile "flat"
-    pointer_accel 0.0 # set mouse sensitivity (between -1 and 1)
+    pointer_accel -0.35 # set mouse sensitivity (between -1 and 1)
 }
 
 input 1133:49989:Logitech_Logi_TKL_Mechanical_Keyboard {
+    xkb_layout us
+    xkb_variant intl
+}
+
+input 9610:268:BY_Tech_Gaming_Keyboard {
+    xkb_layout us
+    xkb_variant intl
+}
+
+input 13652:64009:Compx_2.4G_Wireless_Receiver {
     xkb_layout us
     xkb_variant intl
 }
