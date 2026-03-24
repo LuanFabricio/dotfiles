@@ -9,7 +9,7 @@ require('mason-lspconfig').setup({
 	  'rust_analyzer',
 	  'lua_ls',
 	  'eslint',
-	  'clangd'
+	  'clangd',
   },
   handlers = {
     lsp.default_setup,
@@ -25,6 +25,7 @@ vim.lsp.config('lua_ls', {
 		}
 	}
 })
+vim.lsp.config('gdscript', {})
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
