@@ -4,7 +4,7 @@ return {
 		'nvim-telescope/telescope.nvim',
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
-	{ 'nvim-treesitter/nvim-treesitter'},
+	{ 'nvim-treesitter/nvim-treesitter', },
 	{
 		'VonHeikemen/lsp-zero.nvim',
 		dependencies = {
@@ -56,12 +56,11 @@ return {
 	{'nvim-tree/nvim-web-devicons'},
 	{'gpanders/editorconfig.nvim'},
 	{
-		"iamcco/markdown-preview.nvim",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-		ft = { "markdown" },
-		build = function() vim.fn["mkdp#util#install"]() end,
+	    "iamcco/markdown-preview.nvim",
+	    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+	    ft = { "markdown" },
+	    build = function() vim.fn["mkdp#util#install"]() end,
 	},
-
 	{
 		"NeogitOrg/neogit",
 		dependencies = { {"nvim-lua/plenary.nvim"}, {"sindrets/diffview.nvim"} }
